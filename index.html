@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать на нашу страницу</title>
+</head>
+<body>
+    <h1>Добро пожаловать на нашу страницу</h1>
+    <p>Здесь вы можете написать свою жалобу и записаться на прием к врачу.</p>
+    <form action="/submit" method="post">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="complaint">Жалоба:</label><br>
+        <textarea id="complaint" name="complaint" rows="4" cols="50" required></textarea><br><br>
+        <label for="doctor">Врач:</label>
+        <select id="doctor" name="doctor">
+            <option value="doctor1">Доктор 1</option>
+            <option value="doctor2">Доктор 2</option>
+            <option value="doctor3">Доктор 3</option>
+        </select><br><br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
