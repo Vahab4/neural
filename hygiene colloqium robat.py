@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import json
 
-app = Flask(__name__, template_folder='./templates', static_folder='./static')
+app = Flask(__name__, template_folder='', static_folder='./static')
 
 # Функция для чтения данных из JSON-файла и загрузки их в словарь
 def load_from_json(file_path):
