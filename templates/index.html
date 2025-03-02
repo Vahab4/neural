@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game with Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Hello students, let's play a game!</h1>
+    <p>We are preparing for a Russian exam, so I plan to make you speak in Russian.<br>
+    First, I will ask you questions, and then you need to respond in the required format.</p>
+
+    <form id="question-form" method="POST">
+        <label for="question">Question:</label><br>
+        <input type="text" id="question" name="question" placeholder="Enter Question Here"><br>
+        <label for="answer">Answer:</label><br>
+        <textarea id="answer" name="answer" placeholder="Enter Answer Here"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="response-message"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#question-form').on('submit', function (event) {
+                event.preventDefault();
+                var formData = $(this).serialize();
+                $.ajax({
+                    type: 'POST',
+                    url: '/',
+                    data: formData,
+                    success: function (response) {
+                        $('#response-message').html('<p>' + response.message + '</p>');
+                    },
+                    error: function (xhr, status, error) {
+                        alert('An error occurred.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
