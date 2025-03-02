@@ -29,7 +29,7 @@ def index():
     return render_template('index.html', data=d)
 
 def save_to_json():
-    with open('data.json', 'w', encoding='utf-8') as file:
+    with open('src/data.json', 'w', encoding='utf-8') as file:
         json.dump(d, file, ensure_ascii=False, indent=4)
 
 @app.route('/show', methods=['GET'])
