@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning, Nastya!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+        .message {
+            text-align: center;
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .media-frame {
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        .photo-frame img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        Доброе утро, Настя!<br>
+        Желаю тебе прекрасного дня!
+    </div>
+    <div class="media-frame">
+        <video width="100%" controls>
+            <source src="your-video-file.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="media-frame">
+        <video width="100%" controls>
+            <source src="your-second-video-file.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="media-frame photo-frame">
+        <img src="your-photo-file.jpg" alt="A special photo for Nastya">
+    </div>
+    <div class="media-frame photo-frame">
+        <img src="your-second-photo-file.jpg" alt="Another special photo for Nastya">
+    </div>
+</body>
+</html>
